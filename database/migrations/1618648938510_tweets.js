@@ -16,8 +16,8 @@ class Tweets extends Schema_1.default {
             table.string('title').notNullable();
             table.text('content').nullable();
             table.string('image_url').nullable();
-            table.string('image_width').nullable();
-            table.string('image_height').nullable();
+            table.integer('image_width').nullable();
+            table.integer('image_height').nullable();
             table.text('hashtags').nullable();
             table.timestamps();
         });

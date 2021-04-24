@@ -11,6 +11,8 @@ class TweetCreateValidator {
         this.schema = Validator_1.schema.create({
             title: Validator_1.schema.string({ trim: true }, [Validator_1.rules.minLength(1), Validator_1.rules.maxLength(100)]),
             content: Validator_1.schema.string.optional({ trim: true }, [Validator_1.rules.minLength(2)]),
+            imageWidth: Validator_1.schema.number.optional(),
+            imageHeight: Validator_1.schema.number.optional(),
             imageUrl: Validator_1.schema.string.optional({ trim: true }),
             hashtags: Validator_1.schema.string.optional({ trim: true }),
         });
