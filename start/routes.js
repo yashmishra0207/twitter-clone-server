@@ -14,6 +14,11 @@ Route_1.default.get('health', async ({ response }) => {
 Route_1.default.post('/login', 'AuthController.login');
 Route_1.default.post('/signup', 'AuthController.signup');
 Route_1.default.group(() => {
+    Route_1.default.get('/', async ({ response }) => {
+        return response.status(200).json({
+            message: "Connection OK!",
+        });
+    });
     Route_1.default.group(() => {
         Route_1.default.get('/me', 'UsersController.me');
         Route_1.default.get('/show/:id', 'UsersController.show');
